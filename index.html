@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/Grafiki/alkomat.png" type="image/x-icon">
+    <title>Alkomat</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>Alkomat</h1>
+    </header>
+
+    <main class="main">
+        <section class="ObliczanieAlko">
+            <h1 class="nazwaKalkulatora">Oblicz ilość alkoholu w napoju</h1>
+
+            <h3>Podaj ilość spożytego alkoholu w ml</h3>
+            <input type="number" id="IloscWMl">
+
+            <h3>Podaj procent alkoholu w napoju</h3>
+            <input type="number" id="Procent">
+
+            <button onclick="IloscAlkoholu()">Oblicz</button>
+
+            <button onclick="Reset()">Reset</button>
+
+
+
+            <label>Ilość alkoholu</label>
+            <p id="WynikIlosciAlkoholu">????</p>
+            <label>Łączna ilość alkoholu</label>
+            <p id="LacznaIloscAlkoholu">????</p>
+        </section>
+
+        <section class="Alkomat">
+            <h1 class="nazwaKalkulatora">Oblicz ilość promili oraz czas do wytrzeźwienia</h1>
+            <section class="opcje">
+
+                <label>Płeć</label>
+                <input type="radio" name="plec" id="plecM"><label> M</label>
+                <input type="radio" name="plec" id="plecK"><label> K</label><br>
+
+                <label>Waga </label>
+                <input type="number" id="waga"><br>
+
+                <button onclick="ObliczPromile()" class="ObliczPromileBNT">Oblicz</button><br>
+
+                <label>Promile</label>
+                <p id="promile">????</p>
+
+                <label>Czas do wytrzeźwienia</label>
+                <p id="czas">????</p>
+
+
+            </section>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <label>Autor strony: Jakub Kozyra</label>
+
+    </footer>
+
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>

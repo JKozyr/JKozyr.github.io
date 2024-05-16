@@ -1,0 +1,128 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+.header {
+    background-color: black;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+
+    letter-spacing: 10px;
+    font-size: 60px;
+    color: orange;
+
+    height: 150px;
+    width: 100vw;
+
+    padding-left: 20px;
+
+    border-bottom: white solid 2px;
+}
+
+.main {
+    background-color: black;
+
+    color: orange;
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    display: flex;
+
+
+
+    height: calc(100vh - 204px);
+    width: 100vw;
+}
+
+label {
+    font-weight: bold;
+}
+
+.ObliczanieAlko {
+    background-color: black;
+
+    flex-direction: column;
+    display: flex;
+
+    border: solid white 2px;
+    border-radius: 20px;
+
+    height: 50vh;
+    width: 20vw;
+
+    color: orange;
+    padding: 20px;
+    margin-right: 20px;
+}
+
+.nazwaKalkulatora {
+    margin-bottom: 20px;
+}
+
+input {
+    margin-bottom: 15px;
+    background-color: black;
+    border-radius: 20px;
+    border: solid orange 1px;
+    color: orange;
+    padding-left: 10px;
+}
+
+button {
+    margin-bottom: 15px;
+    background-color: black;
+    border-radius: 20px;
+    border: solid orange 1px;
+    color: orange;
+    transition: 0.5s;
+}
+
+button:hover {
+    background-color: orange;
+    color: black;
+    transition: 0.5s;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.ObliczPromileBNT {
+    width: 250px;
+}
+
+.Alkomat {
+    background-color: black;
+
+    flex-direction: column;
+    display: flex;
+
+    border: solid white 2px;
+    border-radius: 20px;
+
+    height: 50vh;
+    width: 30vw;
+
+    color: orange;
+    padding: 20px;
+}
+
+.footer {
+    border-top: white solid 2px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding-left: 10px;
+
+}
