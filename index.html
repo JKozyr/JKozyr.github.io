@@ -20,18 +20,16 @@
             <h1 class="nazwaKalkulatora">Oblicz ilość alkoholu w napoju</h1>
 
             <h3>Podaj ilość spożytego alkoholu w ml</h3>
-            <input type="number" id="IloscWMl">
+            <input type="number" id="IloscWMl" placeholder="500">
 
             <h3>Podaj procent alkoholu w napoju</h3>
-            <input type="number" id="Procent">
+            <input type="number" id="Procent" placeholder="5.8">
 
             <button onclick="IloscAlkoholu()">Oblicz</button>
 
             <button onclick="Reset()">Reset</button>
 
-
-
-            <label>Ilość alkoholu</label>
+            <label>Ilość alkoholu w napoju</label>
             <p id="WynikIlosciAlkoholu">????</p>
             <label>Łączna ilość alkoholu</label>
             <p id="LacznaIloscAlkoholu">????</p>
@@ -46,7 +44,11 @@
                 <input type="radio" name="plec" id="plecK"><label> K</label><br>
 
                 <label>Waga </label>
-                <input type="number" id="waga"><br>
+                <input type="number" id="waga" placeholder="75"><br>
+                <label>Wzrost </label>
+                <input type="number" id="wzrost" placeholder="180cm"><br>
+                <label>Ile godzin temu piłeś </label>
+                <input type="number" id="czasPicia" placeholder="2" value="0"><br>
 
                 <button onclick="ObliczPromile()" class="ObliczPromileBNT">Oblicz</button><br>
 
@@ -55,10 +57,7 @@
 
                 <label>Czas do wytrzeźwienia</label>
                 <p id="czas">????</p>
-
-
             </section>
-
         </section>
     </main>
 
@@ -68,7 +67,6 @@
     </footer>
 
     <script src="app.js"></script>
-
 
 </body>
 

@@ -16,7 +16,7 @@ body {
     flex-direction: row;
     display: flex;
 
-    letter-spacing: 10px;
+    letter-spacing: 5px;
     font-size: 60px;
     color: orange;
 
@@ -125,4 +125,155 @@ button:hover {
     align-items: center;
     padding-left: 10px;
 
+}
+
+@media (max-width: 1650px) {
+    body {
+        overflow: auto;
+        overflow-x: hidden;
+    }
+
+    .header {
+        background-color: black;
+    
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        display: flex;
+    
+        letter-spacing: 5px;
+        font-size: 30px;
+        color: orange;
+    
+        height: 75px;
+        width: 100vw;
+    
+        padding-left: 10px;
+    
+        border-bottom: white solid 2px;
+    }
+
+    .main {
+        background-color: black;
+    
+        color: orange;
+    
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        display: flex;
+    
+    
+    
+        height: 100vh;
+        width: 100vw;
+    }
+
+    .ObliczanieAlko {
+        background-color: black;
+    
+        flex-direction: column;
+        display: flex;
+    
+        border: solid white 2px;
+        border-radius: 20px;
+    
+        height: 60vh;
+        width: 30vw;
+    
+        color: orange;
+        padding: 20px;
+        margin-right: 20px;
+    }
+
+    .Alkomat {
+        background-color: black;
+    
+        flex-direction: column;
+        display: flex;
+    
+        border: solid white 2px;
+        border-radius: 20px;
+    
+        height: 60vh;
+        width: 30vw;
+    
+        color: orange;
+        padding: 20px;
+    }
+}
+
+
+/*-----------------------------------------------------------------------*/
+
+
+@media (max-width: 1000px) {
+    .header {
+        background-color: black;
+    
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        display: flex;
+    
+        letter-spacing: 5px;
+        font-size: 30px;
+        color: orange;
+    
+        height: 75px;
+        width: 100vw;
+    
+        padding-left: 10px;
+    
+        border-bottom: white solid 2px;
+    }
+
+    .main {
+        background-color: black;
+    
+        color: orange;
+    
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        display: flex;
+    
+    
+    
+        height: 150vh;
+        width: 100vw;
+    }
+
+    .ObliczanieAlko {
+        background-color: black;
+    
+        flex-direction: column;
+        display: flex;
+    
+        border: solid white 2px;
+        border-radius: 20px;
+    
+        height: 60vh;
+        width: 70vw;
+    
+        color: orange;
+        padding: 20px;
+    }
+
+    .Alkomat {
+        background-color: black;
+    
+        flex-direction: column;
+        display: flex;
+    
+        border: solid white 2px;
+        border-radius: 20px;
+    
+        height: 60vh;
+        width: 70vw;
+        margin-left: -20px;
+    
+        color: orange;
+        padding: 20px;
+    }
 }

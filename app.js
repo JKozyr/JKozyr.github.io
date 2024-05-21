@@ -22,19 +22,77 @@ function IloscAlkoholu() {
 
 function ObliczPromile() {
     // Pobieranie wagi z inputa
-    const Waga = document.getElementById("waga").value;
+    let Waga = document.getElementById("waga").value;
+    const Wzrost = document.getElementById("wzrost").value;
+    let BMI = Waga / ((Wzrost * Wzrost) / 10000);
+
 
     // Deklaracja if która sprawdza jaki radiobutton jest zaznaczony
     let plynyUstrojowe = 0;
-    if (document.getElementById("plecM").checked) {
-        plynyUstrojowe = 0.7 * Waga;
-    }
-    else if (document.getElementById("plecK").checked) {
-        plynyUstrojowe = 0.6 * Waga;
+    let plynyUstrojoweTluszczu = 0;
+
+
+
+
+
+    if (BMI > 25) {
+        let WspolczynnikNadwagi = BMI - 25;
+        let Nadwaga = WspolczynnikNadwagi * ((Wzrost * Wzrost) / 10000);
+
+        if (document.getElementById("plecM").checked) {
+            Waga = Waga - Nadwaga;
+            plynyUstrojoweTluszczu = 0.15 * Nadwaga;
+            plynyUstrojowe = 0.7 * Waga;
+            plynyUstrojowe += plynyUstrojoweTluszczu;
+            
+        }
+
+        else if (document.getElementById("plecK").checked) {
+            Waga = Waga - Nadwaga;
+            plynyUstrojoweTluszczu = 0.15 * Nadwaga;
+            plynyUstrojowe = 0.6 * Waga;
+            plynyUstrojowe += plynyUstrojoweTluszczu;
+
+        }
     }
 
+    else if (BMI < 18.5) {
+        let WspolczynnikNadwagi = 18.5 - BMI;
+        let Niedowaga = WspolczynnikNadwagi * ((Wzrost * Wzrost) / 10000);
+
+        if (document.getElementById("plecM").checked) {
+            Waga = Waga - Niedowaga;
+            plynyUstrojoweTluszczu = 0.15 * Nadwaga;
+            plynyUstrojowe = 0.7 * Waga;
+            plynyUstrojowe += plynyUstrojoweTluszczu;
+            
+        }
+
+        else if (document.getElementById("plecK").checked) {
+            Waga = Waga - Niedowaga;
+            plynyUstrojoweTluszczu = 0.15 * Nadwaga;
+            plynyUstrojowe = 0.6 * Waga;
+            plynyUstrojowe += plynyUstrojoweTluszczu;
+        }
+    }
+
+    else{
+        if (document.getElementById("plecM").checked) {
+            plynyUstrojowe = 0.7 * Waga;
+        }
+
+        else if (document.getElementById("plecK").checked) {
+            plynyUstrojowe = 0.6 * Waga;
+        }
+    }
+
+    
+
     // Obliczenie promili
+    let CzasPicia = document.getElementById("czasPicia").value;
+    CzasPicia = CzasPicia * 0.15;
     let promile = wynikWszystkiego / plynyUstrojowe;
+    promile = promile - CzasPicia;
 
     // Wypisywanie promili
     document.getElementById("promile").innerHTML = promile.toFixed(2) + "‰"
@@ -44,8 +102,8 @@ function ObliczPromile() {
     let godzin = 0;
 
     // Obliczanie czasu do wytrzeźwienia
-    while (promile > 0.15) {
-        promile -= 0.003;
+    while(promile > 0) {
+        promile -= 0.0025;
 
         if (minut === 59) {
             godzin++;
