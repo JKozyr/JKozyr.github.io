@@ -62,7 +62,7 @@ function ObliczPromile() {
 
         if (document.getElementById("plecM").checked) {
             Waga = Waga - Niedowaga;
-            plynyUstrojoweTluszczu = 0.15 * Nadwaga;
+            plynyUstrojoweTluszczu = 0.15 * Niedowaga;
             plynyUstrojowe = 0.7 * Waga;
             plynyUstrojowe += plynyUstrojoweTluszczu;
             
@@ -70,7 +70,7 @@ function ObliczPromile() {
 
         else if (document.getElementById("plecK").checked) {
             Waga = Waga - Niedowaga;
-            plynyUstrojoweTluszczu = 0.15 * Nadwaga;
+            plynyUstrojoweTluszczu = 0.15 * Niedowaga;
             plynyUstrojowe = 0.6 * Waga;
             plynyUstrojowe += plynyUstrojoweTluszczu;
         }
