@@ -95,6 +95,9 @@ function ObliczPromile() {
     promile = promile - CzasPicia;
 
     // Wypisywanie promili
+    if(promile < 0){
+        promile = 0;
+    }
     document.getElementById("promile").innerHTML = promile.toFixed(2) + "‰"
 
     // Zdefiniowanie godzin i minut
