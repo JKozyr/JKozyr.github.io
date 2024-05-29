@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./infoStyle.css">
+    <link rel="shortcut icon" href="/Grafiki/alkomat.png" type="image/x-icon">
+    <title>Alkomat</title>
+</head>
+<body>
+    
+    <header class="header">
+        <h1>Alkomat</h1>
+    </header>
+
+    <main class="main">
+        <section class="buttons">
+            <button class="button" id="back" onclick="PreviousPage()"><img src="./Grafiki/back.png" alt="back"></button>
+            <button class="button" id="next" onclick="NextPage()"><img src="./Grafiki/next.png" alt="next"></button>
+        </section>
+
+        <section class="ObliczanieAlko" id="page1">
+            <h1>Co to promil?</h1>
+            <ul>
+                <li>Promil to jedna tysięczna (1/1000) całości, czyli 0,1%. Używamy go do wyrażania bardzo małych proporcji.</li>
+            </ul>
+
+            <h1>Obliczanie ml czystego alkoholu</h1>
+            <ul>
+                <li><b>Piwo:</b> Pół litra piwa (500 ml) o 6% alkoholu zawiera 500 ml * 0,06 = 30 ml alkoholu.</li>
+            </ul>
+
+            <h1>Przeliczanie ml na gramy</h1>
+            <ul>
+                <li><b>Gęstość alkoholu to 0,79 g/ml.</b></li>
+                <li><b>Piwo:</b> 30 ml * 0,79 g/ml = 23,7 g alkoholu.</li>
+            </ul>
+
+            <h1>Obliczanie płynów ustrojowy bez BMI</h1>
+            <h3>Płeć i masa ciała:</h3>
+            <ul>
+                <li><strong>Mężczyzna:</strong> 70% płynów ustrojowych</li>
+                <li><strong>Kobieta:</strong> 60% płynów ustrojowych</li>
+            </ul>
+            <h2>Przykłady:</h2>
+            <ul>
+                <li><strong>72 kg mężczyzna:</strong> 72 kg * 0,7 = 50,4 kg płynów ustrojowych</li>
+                <li><strong>58 kg kobieta:</strong> 58 kg * 0,6 = 34,8 kg płynów ustrojowych</li>
+            </ul>
+        </section>
+
+        <section class="Alkomat_closed" id="page2">
+            <h1 class="nazwaKalkulatora">Jak obliczyć BMI?</h1>
+                <h2>Obliczanie nadwagi/niedowagi</h1>
+                <p><strong>BMI:</strong> masa ciała (kg) / wzrost (m)<sup>2</sup>.</p>
+                <h2>Przykład (nadwaga):</h2>
+                <ul>
+                    <li><strong>Masa ciała:</strong> 90 kg</li>
+                    <li><strong>Wzrost:</strong> 1,75 m</li>
+                    <li><strong>Obliczenie:</strong> 90 / 1,75<sup>2</sup> = 29,4 (BMI)</li>
+                    <li><strong>Nadwyżka BMI:</strong> 29,4 - 25 = 4,4</li>
+                    <li><strong>Nadwaga:</strong> 4,4 * 1,75<sup>2</sup> = 13,5 kg</li>
+                </ul>
+                <h2>Obliczanie ilości płynów ustrojowych przy nadwadze:</h2>
+                <p><strong>Przykład:</strong> Mężczyzna o wadze 90 kg i wzroście 175 cm.</p>
+                <ul>
+                    <li><strong>Obliczenie bez nadwagi:</strong> 0,7 * (90 kg - 13,5 kg) = 53,5 kg płynów</li>
+                    <li><strong>Nadmiar tłuszczu:</strong> 13,5 kg * 0,15 = 2 kg płynów</li>
+                    <li><strong>Razem:</strong> 53,5 kg + 2 kg = 55,5 kg płynów</li>
+                </ul>
+        </section>
+
+        <section class="ObliczaniePromili_closed" id="page3">
+                <h1>Obliczanie promili</h1>
+                    <h2>Mamy już wszsytkie podstawowe dane aby obliczyć zawartość alkoholu we krwi</h2>
+                    <ul>
+                        <li><strong>Masa ciała: </strong>72 kg</li>
+                        <li><strong>Wzrost:</strong> 175</li>
+                        <li><strong>Gramy alkoholu:</strong> 23,7 (czyli piwo 500ml 6%)</li>
+                        <li><strong>Płyny ustrojowe:</strong> 50,4 kg</li>
+                        <li><strong>BMI:</strong> poprawnę</li>
+                    </ul>
+                    <p>Przykładowy mężczyzna wypił przykładowe piwo: Zawartość alkoholu we krwi = 23,7 g / 50,4 kg = 0,47 promila</p>
+                    <p>Przyjmuje się że zdrowa osoba traci 0,15 promila na godzinę</p>
+                    <p>Taka osoba wytrzeźwieje po około 3 godzinach</p>
+                    
+
+                
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <section class="footerL">
+            <label>Autor strony: Jakub Kozyra</label>
+        </section>
+
+        <section class="footerR">
+            <a href="index.html" class="info">Strona główna</a>
+        </section>
+    </footer>
+<script src="./info.js"></script>
+</body>
+</html>

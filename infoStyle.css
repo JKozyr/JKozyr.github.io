@@ -1,0 +1,110 @@
+.ObliczanieAlko{
+    width: 90vw;
+    display: flex;
+}
+
+.ObliczanieAlko_closed{
+    display: none;
+}
+
+.ObliczaniePromili{
+    background-color: black;
+
+    flex-direction: column;
+    display: flex;
+
+    border: solid white 2px;
+    border-radius: 20px;
+
+    height: 40vh;
+    width: 90vw;
+
+    color: orange;
+    padding: 20px;
+    margin-right: 20px;
+
+}
+
+.main{
+    flex-direction: column;
+}
+
+.ObliczaniePromili_closed{
+    display: none;
+}
+
+.Alkomat{
+    width: 90vw;
+    padding-left: 30px;
+    display: flex;
+}
+
+.Alkomat_closed{
+    display: none;
+}
+
+.buttons{
+    padding-top: 10px;
+    width: 100px;
+    height: 100px;
+    width: 100vw;
+    justify-content: center;
+    flex-direction: row;
+    display: flex;
+    background-color: black;
+}
+
+.button{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: black;
+    border: 1px white solid;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: 0.3s;
+
+}
+
+.button:hover{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background-color: black;
+    border: 3px white solid;
+    margin-left: 5px;
+    margin-right: 5px;
+    transition: 0.6s;
+}
+
+img{
+    height: 10vh;
+}
+
+li{
+    margin-left: 40px;
+}
+
+@media (max-width: 1650px) {
+    .ObliczanieAlko{
+        width: 55vw;
+    }
+
+    .Alkomat{
+        width: 30vw;
+    }
+}
+
+@media (max-width: 1000px) {
+    .ObliczanieAlko{
+        width: 80vw;
+    }
+
+    .Alkomat{
+        width: 80vw;
+    }
+
+    .main{
+        height: 100vh;
+    }
+}
