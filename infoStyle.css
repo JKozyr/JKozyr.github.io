@@ -98,10 +98,19 @@ li{
 @media (max-width: 1000px) {
     .ObliczanieAlko{
         width: 80vw;
+        height: 70vh;
+
     }
 
     .Alkomat{
         width: 80vw;
+        height: 70vh;
+
+    }
+
+    .ObliczaniePromili{
+        width: 80vw;
+        height: 70vh;
     }
 
     .main{
